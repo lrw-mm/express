@@ -20,7 +20,7 @@ app.all('*', function (req, res, next) {
     }
 });
 
-app.post('/content', function (req, res) {
+app.post('/article', function (req, res) {
     console.log(req.body);
     var money = req.body.money/*把内容从对象中拿出来*/
     var time = req.body.time
@@ -36,7 +36,7 @@ app.post('/content', function (req, res) {
      })
 })
 
-app.get('/getContent', function (req, res) {/*获取数据库中的内容*/
+app.get('/getArticle', function (req, res) {/*获取数据库中的内容*/
     console.log(req.query);
     let income = req.query.income;
     let date = req.query.date;
